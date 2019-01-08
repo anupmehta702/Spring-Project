@@ -3,13 +3,13 @@ pipeline {
       mvnHome='echo %MAVEN_HOME%'
    }
     agent any
-    stages {
-        node {
+    node {
           stage("Print variables") {
             def foo = "foo"
             bat "echo ${foo}"
           }
         }
+    stages {
         stage('check enviornment') {
             steps {
                bat 'echo %PATH%'   
