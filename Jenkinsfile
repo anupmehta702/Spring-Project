@@ -1,11 +1,12 @@
 pipeline {
+    environment {
+      mvnHome='echo %MAVEN_HOME%'
+   }
     agent any
     stages {
-        def mvnHome
         stage('check enviornment') {
             steps {
-               bat 'echo %PATH%'
-                mvnHome='echo %MAVEN_HOME%'
+               bat 'echo %PATH%'   
             }
         }
         stage('build') {
