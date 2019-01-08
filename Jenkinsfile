@@ -4,11 +4,13 @@ pipeline {
         stage('check enviornment') {
             steps {
                bat 'echo %PATH%'
+                mvnHome='echo %MAVEN_HOME%'
             }
         }
         stage('build') {
             steps {
-               bat(/"C:\Program Files\apache-maven-3.0.5\bin\mvn" clean package install/);
+                echo mvnHome
+               bat(/"${mvnHome}\bin\mvn" clean package install/);
             }
         }
     }
