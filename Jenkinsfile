@@ -10,8 +10,10 @@ pipeline {
             }
         }
         stage("Print variables") {
-            def foo = "foo"
-            bat "echo ${foo}"
+            steps{
+                def foo = "foo"
+                bat "echo ${foo}"
+            }
         }
         stage('build') {
             steps {
