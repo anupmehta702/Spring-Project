@@ -1,9 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('check enviornment') {
             steps {
                bat 'echo %PATH%'
+            }
+        }
+        stage('build') {
+            steps {
+               bat 'mvn clean package install'
             }
         }
     }
