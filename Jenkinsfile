@@ -1,6 +1,7 @@
 pipeline {
     agent any
     stages {
+        def mvnHome
         stage('check enviornment') {
             steps {
                bat 'echo %PATH%'
