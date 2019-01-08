@@ -1,6 +1,6 @@
 
-node {
-    pipeline {
+pipeline {
+    node {
         environment {
           mvnHome='echo %MAVEN_HOME%'
        }
