@@ -4,6 +4,12 @@ pipeline {
    }
     agent any
     stages {
+        node {
+          stage("Print variables") {
+            def foo = "foo"
+            bat "echo ${foo}"
+          }
+        }
         stage('check enviornment') {
             steps {
                bat 'echo %PATH%'   
