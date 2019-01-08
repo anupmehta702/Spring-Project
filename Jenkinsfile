@@ -12,7 +12,7 @@ pipeline {
         stage('build') {
             steps {
                 echo mvnHome
-               bat(/"${mvnHome}\bin\mvn" clean package install/);
+               bat(/"%MAVEN_HOME%\bin\mvn" clean package install/);
             }
         }
     }
