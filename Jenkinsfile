@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'java --version'
+                sh 'mvn --version'
                 //bat "echo Hello World"
                //bat "docker info"
             }
