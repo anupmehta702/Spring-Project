@@ -3,7 +3,7 @@ pipeline {
     //agent { docker { image 'maven:3-alpine' } }
    // agent { docker { image 'node:7-alpine' } }
     //agent { docker { image 'openjdk' } }
-    agent { docker { 'openjdk:8-jdk-alpine' } } 
+    agent { docker { image 'openjdk:8-jdk-alpine' } } 
    // agent any
     stages {
         stage('build') {
