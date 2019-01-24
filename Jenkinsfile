@@ -6,14 +6,16 @@ pipeline {
     stages {
         stage('check enviornment') {
             steps {
-                bat 'echo %PATH%'
+                //bat 'echo %PATH%'
+                sh 'echo %PATH%'
             }
         }
         stage("Print variables") {
             steps{
                 script{
                     def foo = "foo"
-                    bat "echo ${foo}"
+                    //bat "echo ${foo}"
+                    sh 'echo ${foo}'
                 }
             }
         }
