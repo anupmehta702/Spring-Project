@@ -17,9 +17,13 @@ pipeline {
                 }
             }
         }
+        stage('test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
         stage('build') {
             steps {
-                echo mvnHome
                 bat(/"%MAVEN_HOME%\bin\mvn" clean package install/);
             }
         }
