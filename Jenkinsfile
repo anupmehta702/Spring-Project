@@ -6,8 +6,7 @@ pipeline {
     stages {
         stage('check enviornment') {
             steps {
-                //bat 'echo %PATH%'
-                echo %PATH%
+                bat 'echo %PATH%'
             }
         }
         stage("Print variables") {
